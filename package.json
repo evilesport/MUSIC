@@ -1,0 +1,24 @@
+{
+  "name": "musicbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "opusscript": "^0.0.6",
+    "discord.js": "^11.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattes2505/AR-BOT.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mattes2505/AR-BOT/issues"
+  },
+  "homepage": "https://github.com/Mattes2505/AR-BOT#readme"
+}

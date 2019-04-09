@@ -1,1 +1,1 @@
-worker: python music.py
+Worker: node index.js
