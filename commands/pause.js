@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
         return message.channel.send(`🎵 Pause`);
     }
 
-    return [message.delete(), utils.timed_msg('⚠ No musics are being played.', 5000)];
+    return [message.delete(), utils.timed_msg('⚠ Es wird keine musik gespielt.', 5000)];
     
 };
 

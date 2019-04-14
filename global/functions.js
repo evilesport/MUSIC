@@ -35,7 +35,7 @@ module.exports = (bot, utils, ytdl, config) => {
 
     bot.unloadCommand = async (commandName) => {
         try {
-            if (!commandName) return `The command \`${commandName}\` doesn"t seem to exist. Try again!`;
+            if (!commandName) return `Der Command \`${commandName}\` scheint nicht zu existieren :d!`;
 
             if (commandName.shutdown) await commandName.shutdown(bot);
             delete require.cache[require.resolve(`../commands/${commandName}.js`)];
@@ -82,7 +82,7 @@ module.exports = (bot, utils, ytdl, config) => {
         } else {
             queue.musics.push(music);
             if (playlist) return;
-            else return message.channel.send(`🎵 **${music.title}** has been added to queue`);
+            else return message.channel.send(`🎵 **${music.title}** wurde zur queue geadded `);
         }
         return;
     }
@@ -94,7 +94,7 @@ module.exports = (bot, utils, ytdl, config) => {
             queue.voiceChannel.leave();
             bot.queue.delete(guild.id);
             bot.votes.delete(guild.id);
-            return queue.textChannel.send(`🎵 Music playback has ended`);
+            return queue.textChannel.send(`🎵 Playback ist zu ende`);
         }
 
         let dispatcher = queue.connection.playStream(ytdl(music.url))
@@ -109,7 +109,7 @@ module.exports = (bot, utils, ytdl, config) => {
             .on('error', err => console.error(err));
         dispatcher.setVolumeLogarithmic(queue.volume / 100);
 
-        queue.textChannel.send(`🎵 **${music.title}** is now being played`);
+        queue.textChannel.send(`🎵 **${music.title}** wird jetzt gespielt`);
     }
 
 }
